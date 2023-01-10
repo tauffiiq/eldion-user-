@@ -1,0 +1,55 @@
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='layanan_style.css') }}">
+{% endblock %}
+{% extends "base.html" %} {% block title %}Layanan{% endblock %} 
+
+{% block content %}
+    <!-- tulisan fitur -->
+    <div class="kata">
+        <h2>Daftar Layanan</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Cumque libero veniam velit at dolorem voluptatum? </p>
+    </div>
+    
+    <!-- card layanan -->
+        <section class="content-container1">
+      <!-- card 1 -->
+      <div class="card" style="width: 18rem;">
+        <img src="/static/asset/perawat.png" class="card-img-top" alt="dokter">
+        <div class="card-body">
+          <h5 class="card-title">Perawat Lansia</h5>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla cupiditate et</p>
+          <a href="/perawat" class="btn btn-primary">See More</a>
+        </div>
+      </div>
+      <!-- card 2 -->
+      <div class="card" style="width: 18rem;">
+        <img src="/static/asset/fisioterapi.png" class="card-img-top" alt="fisioterapi">
+        <div class="card-body">
+          <h5 class="card-title">Fisioterapi</h5>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla cupiditate et</p>
+          <a href="/fisio" class="btn btn-primary">See More</a>
+        </div>
+      </div>
+
+      <!-- card 3 -->
+      <div class="card" style="width: 18rem;">
+        <img src="/static/asset/fisioterapi.png" class="card-img-top" alt="fisioterapi">
+        <div class="card-body">
+          <h5 class="card-title">Promo Hari Ibu</h5>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla cupiditate et</p>
+          <a href="#" class="btn btn-primary">See More</a>
+        </div>
+      </div>
+      <!-- card 4 -->
+      <div class="card" style="width: 18rem;">
+        <img src="/static/asset/fisioterapi.png" class="card-img-top" alt="fisioterapi">
+        <div class="card-body">
+          <h5 class="card-title">Promo Hari Ibu</h5>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla cupiditate et</p>
+          <a href="#" class="btn btn-primary">See More</a>
+        </div>
+      </div>
+    </section>
+
+{% endblock %}

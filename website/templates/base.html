@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Home{% endblock %}</title>
+
+    <link rel="shortcut icon" href="/static/asset/logo1.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+    <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
+    {% block style %}
+    {% endblock %}
+
+  </head>
+  <body>
+
+    <!-- navbar -->
+    <nav class="navbar">
+      {% if user.is_authenticated %}
+      <a href="/"><img src="/static/asset/logo.svg" alt="logo"></a> 
+      <div class="nav-menu">
+          <ul>
+              <li><a href="/fisio">Fisioterapi</a></li>
+              <li><a href="/perawat">Perawat Lansia</a></li>
+              <li><a href="/bio">Biodata</a></li>    
+          </ul>
+      </div>
+      <div class="square">
+        <button class="btn"><a id="logout" href="/logout">Keluar</a></button>
+    </div>
+
+      {% else %}
+      <a href="/"><img src="/static/asset/logo.svg" alt="logo"></a> 
+      <div class="nav-menu">
+          <ul>
+              <li><a href="/">Beranda</a></li>
+              <li><a href="/perawat">Perawat Lansia</a></li>
+              <li><a href="/sign-up">Daftar</a></li>
+          </ul>
+      </div>
+      <div class="square">
+          <button class="btn"><a id="login" href="/login">Masuk</a></button>
+      </div>
+      {% endif %}
+  </nav>
+
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+    <!-- body -->
+    <div class="body">
+      {% block content %}
+      {% endblock %}
+  </div>
+
+    <footer>
+      <img class="log-foot" src="/static/asset/logo.svg" alt="logfoot">
+      <!-- card 1 -->
+      <div class="foot-content">
+          <p>
+              <a class="site-map" href="#">Site Map</a>
+          </p>
+          <div class="foot-body">
+              <a href="#">Tentang Kami</a>
+              <br>
+              <a href="#">Layanan</a>
+              <br>
+              <a href="#">FAQ</a>
+              <br>
+              <br>
+              <a href="/regist">Apakah kamu Dokter/Perawat?</a>
+
+          </div>
+      </div>
+      <!-- card 2 -->
+      <div class="foot-sosmed">
+          <p>
+              <a class="site-map" href="#">Follow kami di</a>
+          </p>
+          <div class="foot-body">
+              <img src="/static/asset/facebook.svg" alt="facebook">
+              <img src="/static/asset/instagram.svg" alt="instagram">
+              <img src="/static/asset/linkedln.svg" alt="linkedln">
+              <img src="/static/asset/twitter.svg" alt="twitter">
+          </div>
+      </div> 
+      <!-- card 3 -->
+      <div class="foot-content">
+          <div class="foot-body">
+              <p><img src="/static/asset/call.svg" alt="call">(+62)81296659251</p>
+              <p><img src="/static/asset/whatsapp.svg" alt="WA">(+62)81296659251</p>
+              <p><img src="/static/asset/mail.svg" alt="mail">careageid@gmail.com</p>
+          </div>
+      </div>
+  </footer>
+  <section class="last">
+      <p>Copyright 2022 PT.CareAge</p>
+  </section>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script 
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+      crossorigin="anonymous">
+    </script>
+    <script 
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" 
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+      crossorigin="anonymous">
+    </script>
+    <script 
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" 
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+      crossorigin="anonymous">
+    </script>
+
+  </body>
+</html>

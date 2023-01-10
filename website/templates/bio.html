@@ -1,0 +1,157 @@
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='bio_style.css') }}">
+{% endblock %}
+
+{% extends "base.html" %} {% block title %}Biodata{% endblock %} 
+
+{% block content%}
+<div class="biodata">
+    <form>
+      <div class="title">
+        <h1>Biodata Pasien</h1>
+        <p>Lengkapi biodata untuk pelayanan yang maksimal</p>
+      </div>
+      <div class="BP">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName">Nama Lengkap</label>
+            <input type="name" class="form-control" id="inputName" placeholder="Nama Lengkap">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email Anda yang Terdaftar">
+          </div>
+        </div>
+        <div class="form-group2 col-md-4">
+          <label for="inputHandphone">No.Telp</label>
+          <input type="text" class="form-control" id="inputHandphone" placeholder="Nomer Telfon">
+        </div>
+      </div>
+        <hr>
+        <!-- alamat -->
+        <div class="AP">
+          <h2>Alamat Pasien</h2>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputState">Provinsi</label>
+              <select id="inputState" class="form-control">
+                <option selected>--Pilih Provinsi--</option>
+                <option>DKI Jakarta</option>
+                <option>Banten</option>
+                <option>jawa Barat</option>
+                <option>Yogyakarta</option>
+                <option>jawa Timur</option>
+              </select>
+            </div>
+            <div class="form-group col-md-8">
+              <label for="inputCity">Kota</label>
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Alamat</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Alamat Lengkap">
+          </div>
+          <div class="form-group">
+            <label for="inputAddress2">Alamat 2</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Alamat Lengkap">
+          </div>  
+        </div>
+        <hr>
+
+        <!-- Kondisi -->
+        <h2>Kondisi Pasien</h2>
+        <div class="Kondisi-Pasien d-flex">
+          <div class="KP-card1 col-md-6">
+            <!-- 1 -->
+            <p>Apakah Pasien memiliki luka?</p>
+            <div class="card1-P2">
+              <div class="form-check1 form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Ya
+                </label>
+              </div>
+              <div class="form-check1 form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Tidak
+                </label>
+              </div>
+            </div>
+            <div class="form-group2 col-md-12">
+              <input type="text" class="form-control" id="KeteranganLuka" placeholder="(Jika Ya) Keterangan">
+            </div>
+    
+            <hr>
+            <!-- 2 -->
+            <p>Apakah ada Asisten Rumah Tangga di Rumah Pasien?</p>
+            <div class="card1-P2">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Ya
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Tidak
+                </label>
+              </div>  
+            </div>
+            <div class="form-group2 col-md-12">
+              <input type="text" class="form-control" id="KeteranganART" placeholder="(Jika Ya) Keterangan">
+            </div>
+          </div>
+          
+          <!-- card 2 -->
+          <div class="KP-card2 col-md-6">
+            <!-- 1 -->
+            <p>Apakah Pasien Terpasang Alat?</p>
+            <div class="card1-P2">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Ya
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Tidak
+                </label>
+              </div>
+            </div>
+            <div class="form-group2 col-md-12">
+              <input type="text" class="form-control" id="KeteranganAlat" placeholder="(Jika Ya) Keterangan">
+            </div>
+            <hr>
+            <!-- 2 -->
+            <p>Apakah ada Diagnosa & Kebutuhan Pasien Lainnya?</p>
+            <div class="card1-P2">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Ya
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Tidak
+                </label>
+              </div>
+            </div>
+            <div class="form-group2 col-md-12">
+              <input type="text" class="form-control" id="KeteranganDiagnosa" placeholder="(Jika Ya) Keterangan">
+            </div>
+          </div>
+        </div>
+        <br>
+        <!-- button -->
+        <button type="submit" class="btn btn-primary">Selesai</button>
+      </form>
+
+</div>
+{% endblock %}

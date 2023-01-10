@@ -1,0 +1,158 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} 
+
+{% block content%}
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="background-color:black">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="height:580px;">
+          <img class="d-block w-100" src="static\asset\c1.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item" style="height:580px;">
+          <img class="d-block w-100" src="static\asset\c2.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item" style="height:580px;">
+          <img class="d-block w-100" src="static\asset\c3.png" alt="Third slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+        <!-- kelebihan  -->
+        <section class="kelebihan-container"> 
+          <div>
+              <h1>Mengapa memilih Eldion? </h1>
+          </div>
+          <div class="card-lebih">
+          <!-- card 1 -->
+          <div class="lebih">
+              <img src="/static/asset/stethoscope.png" alt="homecare">
+          <div class="lebih-body">
+              <h2>Perawat profesional</h2>
+              <p>Perawat yang kami sediakan yaitu perawat dengan sertifikasi profesional </p>
+              </div>
+          </div>
+          <!-- card 2 -->
+          <div class="lebih">
+              <img src="/static/asset/healthcare1.png" alt="homecare">
+          <div class="lebih-body">
+              <h2>Home Care</h2>
+              <p>Kami menyediakan layanan berbasis Home Care seperti Perawat Lansia, Fisioterapi</p>
+              </div>
+          </div>
+          <!-- card 3 -->
+          <div class="lebih">
+              <img src="/static/asset/healthcare.png" alt="homecare">
+          <div class="lebih-body">
+              <h2>Perawat Bersertifikat</h2>
+              <p>Tenaga medis yang kami sediakan sudah bersertifikasi secara resmi</p>
+              </div>
+          </div>
+          <!-- card 4 -->
+          <div class="lebih">
+              <img src="/static/asset/handshake.png" alt="homecare">
+          <div class="lebih-body">
+              <h2>Mitra Terpercaya</h2>
+              <p>Mitra yang bekerja sama dengan kami adalah mitra dengan sertifikasi kesehatan</p>
+          </div>
+          </div>
+          </div>
+      </section>
+
+  <!-- fitur -->
+    <br>
+  <section class="content-container1">
+      <!-- card 1 -->
+      <div class="card" style="width: 18rem;">
+        <img src="/static/asset/perawat.png" class="card-img-top" alt="dokter">
+        <div class="card-body">
+          <h5 class="card-title">Perawat Lansia</h5>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla cupiditate et</p>
+          <a href="/perawat" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+      <!-- card 2 -->
+      <div class="card" style="width: 18rem;">
+        <img src="/static/asset/fisioterapi.png" class="card-img-top" alt="fisioterapi">
+        <div class="card-body">
+          <h5 class="card-title">Fisioterapi</h5>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla cupiditate et</p>
+          <a href="/fisio" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+
+      <!-- card 3 -->
+      <div class="card" style="width: 18rem;">
+        <img src="/static/asset/fisioterapi.png" class="card-img-top" alt="fisioterapi">
+        <div class="card-body">
+          <h5 class="card-title">Promo Hari Ibu</h5>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla cupiditate et</p>
+          <a href="#" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+      <!-- card 4 -->
+      <div class="card" style="width: 18rem;">
+        <img src="/static/asset/fisioterapi.png" class="card-img-top" alt="fisioterapi">
+        <div class="card-body">
+          <h5 class="card-title">Promo Hari Ibu</h5>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla cupiditate et</p>
+          <a href="#" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+  </section>
+
+  <!-- profil -->
+  <section class="profil-container"> 
+    <br>
+      <div class="judul-profil">
+          <h3>Profil Perusahaan</h3>
+          <h1>Eldion</h1>
+      </div>
+      <div class="card-profil">
+          <!-- card 1 -->
+          <div class="lebih">
+            <img src="/static/asset/stethoscope.png" alt="homecare">
+        <div class="lebih-body">
+            <h2>Perawat profesional</h2>
+            <p>Perawat yang kami sediakan yaitu perawat dengan sertifikasi profesional </p>
+            </div>
+        </div>
+        <!-- card 2 -->
+        <div class="lebih">
+            <img src="/static/asset/healthcare1.png" alt="homecare">
+        <div class="lebih-body">
+            <h2>Home Care</h2>
+            <p>Kami menyediakan layanan berbasis Home Care seperti Perawat Lansia, Fisioterapi</p>
+            </div>
+        </div>
+        <!-- card 3 -->
+        <div class="lebih">
+            <img src="/static/asset/healthcare.png" alt="homecare">
+        <div class="lebih-body">
+            <h2>Perawat Bersertifikat</h2>
+            <p>Tenaga medis yang kami sediakan sudah bersertifikasi secara resmi</p>
+            </div>
+        </div>
+        <!-- card 4 -->
+        <div class="lebih">
+            <img src="/static/asset/handshake.png" alt="homecare">
+        <div class="lebih-body">
+            <h2>Mitra Terpercaya</h2>
+            <p>Mitra yang bekerja sama dengan kami adalah mitra dengan sertifikasi kesehatan</p>
+        </div>
+        </div>
+        </div>
+</section>
+
+
+{% endblock %}

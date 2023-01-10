@@ -1,0 +1,95 @@
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='pay_style.css') }}">
+
+{% endblock %}
+{% extends "base.html" %} {% block title %}Pay{% endblock %} 
+
+{% block content %}
+
+<div class="pay d-flex">
+    <div class="card1">
+        <div class="card1-title">
+            <h2>
+                Deskripsi Pesanan :
+            </h2>
+            <hr>
+        </div>
+        <div class="card1-BP d-flex">
+            <img src="static/asset/telemed.png" alt="perawat">
+            <div class="card1-NP d-inline-block">
+                <h3>--nama perawat--</h3>
+                <h4>Perawat Lansia</h4>
+            </div>
+        </div>
+        <div class="card1-DP">
+            <h3>Deskripsi Perawat :</h3>
+            <div class="card-Pd d-flex">
+                <div class="card1-DD">
+                    <p>Biaya Jasa :</p>
+                    <p>------</p>
+                    <p>Biaya Admin :</p>
+                    <p>------</p>
+                </div>
+                <div class="card1-DD">
+                    <p>Biaya Jasa :</p>
+                    <p>------</p>
+                    <p>Biaya Admin :</p>
+                    <p>------</p>
+                </div>    
+            </div>
+        </div>
+        <!-- ringkasan belanja -->
+        <div class="card1-title">
+            <h1>
+                Ringkasan Belanja :
+            </h1>
+            <hr>
+        </div>
+        <div class="card1-DD">
+            <p>Biaya Jasa :</p>
+            <p>------</p>
+            <p>Biaya Admin :</p>
+            <p>------</p>
+        </div>
+        <div class="card1-total">
+            <hr class="total">
+            <p>Total :</p>
+            <p>-------</p>
+        </div>
+    </div>
+
+    <!-- card 2 -->
+    <div class="card2">
+        <div class="card2-PP">
+            <h3>
+                Pilih Pembayaran
+            </h3>
+            <p>
+                Metode bayar untuk Beli Langsung masih terbatas. Pilihan lain tersedia lewat keranjang.
+            </p>
+        </div>
+        <hr class="card2-hr">
+        <div class="card2-TVA">
+            <h3>Transfer Virtual Account :</h3>
+            <div class="card2-Ba d-flex">
+                <img src="static/asset/mandiri.SVG" alt="bank">
+                <a href="/"><img src="static/asset/r-icon.svg" alt="icon"></a>
+            </div>
+            <hr class="card2-hr">
+            <div class="card2-Ba d-flex">
+                <img src="static/asset/mandiri.SVG" alt="bank">
+                <a href="/"><img src="static/asset/r-icon.svg" alt="icon"></a>
+            </div>
+            <hr class="card2-hr">
+            <div class="card2-Ba d-flex">
+                <img src="static/asset/mandiri.SVG" alt="bank">
+                <a href="/"><img src="static/asset/r-icon.svg" alt="icon"></a>
+            </div>
+
+        </div>
+        <!-- <button class="btn btn-block">Bayar</button> -->
+    </div>
+
+</div>
+
+{% endblock %}

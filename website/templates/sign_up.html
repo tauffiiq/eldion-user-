@@ -1,0 +1,61 @@
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='daftar_style.css') }}">
+{% endblock %}
+
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
+content %}
+<div class="daftar">
+  <form method="POST" class="form">
+    <img src="/static/asset/logo.svg" alt="logo">
+    <div class="text">
+      <h1>Daftar</h1>
+      <p>Masukkan Email untuk mulai menggunakan layanan kesehatan di Eldion</p>    
+  </div>
+    <div class="SU-isian">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Enter email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          name="firstName"
+          placeholder="Enter first name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password1">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password1"
+          name="password1"
+          placeholder="Enter password"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password2">Password (Confirm)</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password2"
+          name="password2"
+          placeholder="Confirm password"
+        />
+      </div>  
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  
+</div>
+{% endblock %}

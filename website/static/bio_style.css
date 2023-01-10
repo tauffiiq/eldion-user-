@@ -1,0 +1,19 @@
+.biodata {
+    margin: 25px;
+}
+
+.title {
+    text-align: center;
+}
+.title h1 {
+    font-weight: 600;
+    font-size: 40px;
+}
+.title p {
+    font-size: 17px;
+}
+
+.form-group2 {
+    margin-left: -15px;
+    
+}

@@ -1,0 +1,117 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* list suster */
+#list-sust {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+#list-sust h2 {
+    letter-spacing: 1px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #448519;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: none;
+    cursor: pointer;
+}
+    /* dropdown */
+    .dropdown {
+        display: inline-block;
+        position: relative;
+        margin-left: 20px;
+    }
+    .dropdown-cont {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-cont a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-cont a:hover {
+        background-color: #f1f1f1
+    }
+    .dropdown:hover .dropdown-cont {
+        display: block;
+    }
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+    }
+    /* ============ */
+
+/* Coloumn suster */
+.list-row {
+    grid-template-columns: repeat(2, 2fr) !important;
+    display: flex;
+    justify-content: space-between;
+}
+.column {
+    margin: 10px;
+
+}
+.head-card {
+    display: flex;
+}
+.head-card img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 50%;
+}
+.head-card .prof {
+    display: inline-block;
+}
+.card-body {
+    display: flex;
+    margin-top: 30px;
+
+}
+.card-body button {
+    font-size: 14px;
+    width: 140px;
+    height: 40px;
+    /* padding: 10px; */
+    background-color: #4CAF50;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    margin-left: 150px;
+}
+.card-body button:hover {
+    background-color: #3e8e41;
+}
+.card-body a {
+    color: white;
+}
+.card-body a:hover {
+    color: white;
+}
+
+/* modal */
+.modal-header .btn {
+    margin-left: 100px;
+}
+.modal-body {
+    padding: 10px;
+}

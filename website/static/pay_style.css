@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+/* card 1 */
+.card1 {
+    width: 867px;
+    background-color: #699d46bd;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 20px;
+    color: white;
+}
+.card1-title h2 {
+    font-size: 25px;
+}
+.card1-title hr {
+    margin-top: -2px;
+}
+
+.card1-BP {
+    margin-top: 20px;
+}
+.card1-BP img {
+    height: 100px;
+    border-radius: 50%;
+}
+.card1-NP h3 {
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.card1-NP h4 {
+    margin-left: 20px;
+    color: rgba(255, 255, 255, 0.651);
+    font-size: 20px;
+
+}
+
+.card1-DP {
+    margin-top: 20px;
+}
+.card1-DP h3 {
+    font-size: 25px;
+}
+.card-Pd {
+    margin-left: -29vh;
+    justify-content: space-around;
+}
+
+.card1-title h1 {
+    font-size: 25px;
+}
+.total {
+    width: 300px;
+}
+
+/* card 2 */
+.card2 {
+    width: 414px;
+    background-color: #699d46bd;
+    margin: 20px;
+    margin-left: 0;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+}
+
+.card2-PP h3 {
+    font-size: 25px;
+}
+
+.card2-TVA h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.card2-Ba {
+    justify-content: space-between;
+}
+.card2-Ba img {
+    height: 40px;
+}
+
+.btn {
+    background-color: #448519;
+}
